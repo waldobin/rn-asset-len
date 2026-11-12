@@ -1,0 +1,75 @@
+name: 🐞 Bug report
+description: Something in React Native Asset & Icon Lens isn't working
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Tip: run **React Native: Report Issue** from the Command Palette — it pre-fills the version fields below.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code version
+      placeholder: "1.95.0 (Visual Studio Code)"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS
+      placeholder: "darwin arm64 / win32 x64 / linux x64"
+    validations:
+      required: true
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Project type
+      options:
+        - Expo
+        - React Native CLI
+        - Other / monorepo
+    validations:
+      required: true
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Affected feature
+      options:
+        - Icon picker / quick pick
+        - Icon hover / autocomplete / gutter
+        - Asset hover preview / gutter
+        - Asset diagnostics / autocomplete
+        - Find duplicate images
+        - Bit depth & color space audit
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open file ...
+        2. Hover over ...
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: "Help → Toggle Developer Tools → Console, lines starting with [RN Asset Lens]"
+      render: text
